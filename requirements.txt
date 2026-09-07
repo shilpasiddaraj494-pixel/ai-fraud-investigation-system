@@ -1,0 +1,12 @@
+pandas
+numpy
+pyarrow
+pyspark
+scikit-learn
+xgboost
+shap
+torch
+transformers
+accelerate
+gradio
+matplotlib
