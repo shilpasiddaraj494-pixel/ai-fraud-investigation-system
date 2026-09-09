@@ -103,6 +103,6 @@ The fraud probability supports investigation prioritization but does not indepen
 
 ## Author
 
-**Shilpa Siddharaju**  
+**Shilpa Siddaraju**  
 M.Sc. Data Science  
 Berlin, Germany
