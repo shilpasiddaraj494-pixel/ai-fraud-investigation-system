@@ -1,8 +1,8 @@
 # AI-Powered Fraud Investigation System
 
-An end-to-end fraud investigation system combining **PySpark data engineering, XGBoost, SHAP explainability and Qwen generative AI**.
+An end-to-end fraud investigation system combining **PySpark, XGBoost, SHAP and Qwen AI**.
 
-The system detects suspicious credit-card transactions, explains the contributing signals and produces guarded investigation reports for human review.
+The system identifies suspicious credit-card transactions, explains the contributing risk signals and generates guarded investigation reports for human review.
 
 ![Fraud Investigation Application](images/application_high_risk.png)
 
@@ -17,58 +17,35 @@ The system detects suspicious credit-card transactions, explains the contributin
 | Precision | 91.21% |
 | Recall | 83.84% |
 | F1-score | 87.37% |
-| Selected decision threshold | 42% |
-
-The threshold was selected to balance fraud detection with manageable alert volume.
+| Selected threshold | 42% |
 
 ## System Workflow
 
-1. Process transaction data using PySpark.
-2. Build Bronze, Silver and Gold data layers.
-3. Preserve fraud records and prevent data leakage.
-4. Train a class-weighted XGBoost classifier.
-5. Select a fraud decision threshold.
-6. Explain global and individual predictions using SHAP.
-7. Generate investigation reports using Qwen.
-8. Validate reports using automated guardrails.
-9. Display results through a Gradio application.
+1. Process transaction data through PySpark Bronze, Silver and Gold layers.
+2. Train a class-weighted XGBoost fraud classifier.
+3. Select a decision threshold based on validation performance.
+4. Explain predictions using global and individual SHAP values.
+55. Generate investigation reports using Qwen.
+6. Validate reports using automated guardrails.
+7. Display the results through an interactive Gradio application.
 
 ## Explainable AI
 
-### Global Feature Importance
+### Global Fraud Model Feature Importance
 
 ![Global SHAP Importance](images/global_shap_importance.png)
 
-### Individual Fraud Explanation
+### Individual Fraud Alert Explanation
 
 ![Individual Fraud Explanation](images/individual_fraud_explanation.png)
 
-## Model Validation
-
-![Validation Performance](images/validation_performance.png)
-
-![Threshold Selection](images/threshold_selection.png)
-
-## Application Examples
-
-### High-Risk Transaction
-
-![High-Risk Application](images/application_high_risk.png)
-
-### Low-Risk Transaction
-
-![Low-Risk Application](images/application_low_risk.png)
-
 ## Technology Stack
 
-- Python
+- Python, Pandas and NumPy
 - PySpark
-- Pandas and NumPy
-- XGBoost
-- Scikit-learn
+- XGBoost and Scikit-learn
 - SHAP
-- Qwen
-- Hugging Face Transformers
+- Qwen and Hugging Face Transformers
 - Gradio
 - Google Colab
 
@@ -78,14 +55,14 @@ The threshold was selected to balance fraud detection with manageable alert volu
 ai-fraud-investigation-system/
 ├── 01_Fraud_Data_Pipeline.ipynb
 ├── 02_Fraud_Model.ipynb
-├── requirements.txt
+├── requirements.txt.txt
 ├── images/
 └── README.md
 ```
 
 ## Running the Project
 
-1. Open `01_Fraud_Data_Pipeline.ipynb` in Google Colab and run all cells.
+1. Run `01_Fraud_Data_Pipeline.ipynb` in Google Colab.
 2. Run `02_Fraud_Model.ipynb` after the pipeline artifacts are created.
 3. Select a T4 GPU before loading Qwen.
 4. Run the Gradio application cell.
@@ -97,6 +74,6 @@ This is an educational portfolio project using anonymized transaction data. Frau
 
 ## Author
 
-**Shilpa Siddharaju**  
+**Shilpa Siddharajuennials**  
 M.Sc. Data Science  
 Berlin, Germany
